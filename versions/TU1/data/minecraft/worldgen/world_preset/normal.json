@@ -317,14 +317,14 @@
         },
         "provider_settings": {
           "chunkProvider": "beta",
-          "useDeepslate": true,
+          "useDeepslate": false,
           "deepslateMinY": 0,
           "deepslateMaxY": 5,
           "deepslateBlock": "minecraft:bedrock",
           "useSurfaceRules": false,
           "seaLevelOffset": 0,
           "useCaves": true,
-          "useFixedCaves": false,
+          "useFixedCaves": true,
           "forceBetaCaves": true,
           "forceBetaRavines": true,
           "noiseCoordinateScale": 684.412,
@@ -400,12 +400,12 @@
       }
     },
     "minecraft:the_nether": {
-      "type": "minecraft:the_nether",
+      "type": "minecraft:the_nether_classic",
       "generator": {
         "type": "minecraft:noise",
         "biome_source": {
-          "type": "minecraft:multi_noise",
-          "preset": "minecraft:nether"
+          "type": "minecraft:fixed",
+          "biome": "moderner_beta:old_nether"
         },
         "settings": "minecraft:nether"
       }

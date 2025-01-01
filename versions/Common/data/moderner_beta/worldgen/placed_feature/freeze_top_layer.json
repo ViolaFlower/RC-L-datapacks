@@ -1,0 +1,8 @@
+{
+  "feature": "moderner_beta:freeze_top_layer",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
