@@ -22,14 +22,14 @@ jobs:
 
       - name: Prepare artifacts
         run: |
-            cp LICENSE versions/TU1/
-            cp README.md versions/TU1/
+            cp LICENSE /versions/TU1/
+            cp README.md /versions/TU1/
 
-            cp LICENSE versions/TU3/
-            cp README.md versions/TU3/
+            cp LICENSE /versions/TU3/
+            cp README.md /versions/TU3/
 
-            cp LICENSE versions/TU5/
-            cp README.md versions/TU5/
+            cp LICENSE /versions/TU5/
+            cp README.md /versions/TU5/
 
       - name: Upload TU1 Data
         uses: actions/upload-artifact@v3
