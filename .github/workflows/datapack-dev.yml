@@ -22,20 +22,26 @@ jobs:
 
       - name: Prepare artifacts
         run: |
-            cp ./LICENSE ./versions/TU1/
-            cp ./README.md ./versions/TU1/
+            mkdir TU1-temp
+            cp ./versions/Common/* ./TU1-temp/
+            cp ./versions/TU1/* ./TU1-temp/
+            cp ./LICENSE ./TU1-temp/
+            cp ./README.md ./TU1-temp/
 
-            cp ./LICENSE ./versions/TU5/
-            cp ./README.md ./versions/TU5/
+            mkdir TU5-temp
+            cp ./versions/Common/* ./TU5-temp/
+            cp ./versions/TU5/* ./TU5-temp/
+            cp ./LICENSE ./TU5-temp/
+            cp ./README.md ./TU5-temp/
 
       - name: Upload TU1 Data
         uses: actions/upload-artifact@v3
         with:
           name: "Re-Console-Legacy-Data-TU1-dev-${{ env.COMMIT_SHORT_SHA }}"
-          path: versions/TU1
+          path: TU1-temp
 
       - name: Upload TU5 Data
         uses: actions/upload-artifact@v3
         with:
           name: "Re-Console-Legacy-Data-TU5-dev-${{ env.COMMIT_SHORT_SHA }}"
-          path: versions/TU5
+          path: TU5-temp
