@@ -6,10 +6,10 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.3,
+  "downfall": 0.9,
   "effects": {
     "fog_color": 12638463,
-    "sky_color": 8233727,
+    "sky_color": 7907327,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
@@ -55,15 +55,19 @@
     ],
     [
       "moderner_beta:patch_poppy",
-      "moderner_beta:trees_beta_sparse",
+      "minecraft:trees_swamp",
+      "minecraft:flower_swamp",
       "moderner_beta:patch_grass_taiga_1",
+      "minecraft:patch_dead_bush",
+      "minecraft:brown_mushroom_swamp",
+      "minecraft:red_mushroom_swamp",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin"
     ],
     [
-      "moderner_beta:freeze_top_layer"
+      "moderer_beta:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -134,11 +138,17 @@
         "maxCount": 4,
         "minCount": 1,
         "weight": 10
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
       }
     ],
     "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2
+  "temperature": 0.8
 }

@@ -347,7 +347,7 @@
           "islesUseOuterIslands": false,
           "islesOceanSlideTarget": -200,
           "islesCenterIslandShape": "square",
-          "islesCenterIslandRadius": 25,
+          "islesCenterIslandRadius": 30,
           "islesCenterIslandFalloffDistance": 2,
           "islesCenterOceanRadius": 64,
           "islesCenterOceanFalloffDistance": 16,

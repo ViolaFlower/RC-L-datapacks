@@ -6,10 +6,10 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.3,
+  "downfall": 0.5,
   "effects": {
     "fog_color": 12638463,
-    "sky_color": 8233727,
+    "sky_color": 8364543,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
@@ -54,16 +54,14 @@
       "minecraft:spring_lava"
     ],
     [
-      "moderner_beta:patch_poppy",
       "moderner_beta:trees_beta_sparse",
-      "moderner_beta:patch_grass_taiga_1",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin"
     ],
     [
-      "moderner_beta:freeze_top_layer"
+      "modern_beta:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -71,32 +69,7 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [
       {
@@ -115,7 +88,7 @@
         "type": "minecraft:skeleton",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 100
+        "weight": 20
       },
       {
         "type": "minecraft:creeper",
@@ -138,7 +111,14 @@
     ],
     "underground_water_creature": [],
     "water_ambient": [],
-    "water_creature": []
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      }
+    ]
   },
-  "temperature": 0.2
+  "temperature": 0.0
 }

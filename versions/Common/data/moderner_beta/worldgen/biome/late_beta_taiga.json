@@ -6,7 +6,7 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.3,
+  "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,
     "sky_color": 8233727,
@@ -54,16 +54,14 @@
       "minecraft:spring_lava"
     ],
     [
-      "moderner_beta:patch_poppy",
-      "moderner_beta:trees_beta_sparse",
-      "moderner_beta:patch_grass_taiga_1",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
+      "minecraft:trees_taiga",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin"
     ],
     [
-      "moderner_beta:freeze_top_layer"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -92,6 +90,12 @@
       },
       {
         "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 8
+      },
+      {
+        "type": "minecraft:wolf",
         "maxCount": 4,
         "minCount": 4,
         "weight": 8
@@ -140,5 +144,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2
+  "temperature": 0.05
 }

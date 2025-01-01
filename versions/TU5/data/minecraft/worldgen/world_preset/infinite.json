@@ -343,7 +343,7 @@
           "indevWaterRarity": 8000,
           "indevLavaRarity": 20000,
           "indevSpawnHouse": true,
-          "islesUseIslands": true,
+          "islesUseIslands": false,
           "islesUseOuterIslands": false,
           "islesOceanSlideTarget": -200,
           "islesCenterIslandShape": "square",
@@ -368,7 +368,7 @@
       }
     },
     "minecraft:the_nether": {
-      "type": "minecraft:the_nether_classic",
+      "type": "minecraft:the_nether",
       "generator": {
         "type": "minecraft:noise",
         "biome_source": {

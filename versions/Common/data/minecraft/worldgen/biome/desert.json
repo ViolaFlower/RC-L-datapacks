@@ -6,10 +6,10 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.3,
+  "downfall": 0.0,
   "effects": {
     "fog_color": 12638463,
-    "sky_color": 8233727,
+    "sky_color": 7254527,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
@@ -54,48 +54,25 @@
       "minecraft:spring_lava"
     ],
     [
-      "moderner_beta:patch_poppy",
-      "moderner_beta:trees_beta_sparse",
-      "moderner_beta:patch_grass_taiga_1",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
+      "minecraft:patch_dead_bush_2",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "minecraft:patch_sugar_cane_desert",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_cactus_desert"
     ],
     [
-      "moderner_beta:freeze_top_layer"
+      "minecraft:freeze_top_layer"
     ]
   ],
-  "has_precipitation": true,
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],
     "axolotls": [],
     "creature": [
-      {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      }
     ],
     "misc": [],
     "monster": [
@@ -109,7 +86,7 @@
         "type": "minecraft:zombie",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 95
+        "weight": 19
       },
       {
         "type": "minecraft:skeleton",
@@ -136,9 +113,10 @@
         "weight": 10
       }
     ],
-    "underground_water_creature": [],
+    "underground_water_creature": [
+    ],
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2
+  "temperature": 2.0
 }
