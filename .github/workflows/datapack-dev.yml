@@ -1,0 +1,50 @@
+name: Datapack Dev Builds
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build-data-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create short commit SHA
+        id: vars
+        run: |
+            shortSha=$(git rev-parse --short ${{ github.sha }})
+            echo "COMMIT_SHORT_SHA=$shortSha" >> $GITHUB_ENV
+
+      - name: Prepare artifacts
+        run: |
+            cp LICENSE versions/TU1/
+            cp README.md versions/TU1/
+
+            cp LICENSE versions/TU3/
+            cp README.md versions/TU3/
+
+            cp LICENSE versions/TU5/
+            cp README.md versions/TU5/
+
+      - name: Upload TU1 Data
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Re-Console-Legacy-Data-TU1-dev-${{ env.COMMIT_SHORT_SHA }}"
+          path: versions/TU1
+
+      - name: Upload TU3 Data
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Re-Console-Legacy-Data-TU3-dev-${{ env.COMMIT_SHORT_SHA }}"
+          path: versions/TU3
+
+      - name: Upload TU5 Data
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Re-Console-Legacy-Data-TU5-dev-${{ env.COMMIT_SHORT_SHA }}"
+          path: versions/TU5
