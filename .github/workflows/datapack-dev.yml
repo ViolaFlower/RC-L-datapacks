@@ -35,13 +35,13 @@ jobs:
             cp ./README.md ./TU5-temp/
 
       - name: Upload TU1 Data
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "Re-Console-Legacy-Data-TU1-dev-${{ env.COMMIT_SHORT_SHA }}"
           path: TU1-temp
 
       - name: Upload TU5 Data
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "Re-Console-Legacy-Data-TU5-dev-${{ env.COMMIT_SHORT_SHA }}"
           path: TU5-temp
