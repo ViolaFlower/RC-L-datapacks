@@ -58,7 +58,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-            tar czf $TU1 ./TU1-temp/
-            tar czf $TU5 ./TU5-temp/
+            tar czf $TU1 ./TU1-temp/*
+            tar czf $TU5 ./TU5-temp/*
             
             gh release create ${{ env.COMMIT_SHORT_SHA }} $TU1 $TU5 --target ${{ github.sha }} -t "${VERSION}-${{ env.COMMIT_SHORT_SHA }}" -p
