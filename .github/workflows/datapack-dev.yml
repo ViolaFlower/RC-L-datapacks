@@ -11,6 +11,10 @@ on:
 jobs:
   build-data-dev:
     runs-on: ubuntu-latest
+    env:
+        TU1: 'Re-Console-Legacy-Data-TU1-0.0.30-latest.zip'
+        TU5: 'Re-Console-Legacy-Data-TU5-0.0.30-latest.zip'
+        VERSION: 0.0.30
     steps:
       - uses: actions/checkout@v4
 
@@ -45,3 +49,16 @@ jobs:
         with:
           name: "Re-Console-Legacy-Data-TU5-dev-${{ env.COMMIT_SHORT_SHA }}"
           path: TU5-temp
+          
+      - name: Create release & upload
+        if: |
+          github.repository == 'ViolaFlower/RC-L-datapacks' &&
+          github.event.action != 'pull_request' &&
+          github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            tar czf $TU1 ./TU1-temp/
+            tar czf $TU5 ./TU5-temp/
+            
+            gh release create ${{ env.COMMIT_SHORT_SHA }} $TU1 $TU5 --target ${{ github.sha }} -t "${VERSION}-${{ env.COMMIT_SHORT_SHA }}" -p
